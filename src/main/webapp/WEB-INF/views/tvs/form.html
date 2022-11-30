@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <meta charset="UTF-8">
+  <title>Form</title>
+  <link rel="stylesheet" th:href="@{~/css/tvs.css}">
+</head>
+<body>
+  <div th:fragment="form">
+    <input type="hidden" th:field="*{id}" id="id">
+
+    <label for="model">Model: </label>
+    <input type="text" th:field="*{model}" id="model">
+    <div class="error-message" th:if="${#fields.hasErrors()}" th:errors="*{model}">
+      Model error
+    </div>
+    <br>
+
+    <label for="producer">Producer: </label>
+    <input type="text" th:field="*{producer}" id="producer">
+    <div class="error-message" th:if="${#fields.hasErrors()}" th:errors="*{producer}">
+      Producer error
+    </div>
+    <br>
+
+    <label for="production-country">Production country: </label>
+    <input type="text" th:field="*{productionCountry}" id="production-country">
+    <div class="error-message" th:if="${#fields.hasErrors()}" th:errors="*{productionCountry}">
+      Production country error
+    </div>
+    <br>
+
+    <label for="width">Screen width: </label>
+    <input type="number" th:field="*{width}" id="width">
+    <div class="error-message" th:if="${#fields.hasErrors()}" th:errors="*{width}">
+      Width error
+    </div>
+    <br>
+
+    <label for="height">Screen height: </label>
+    <input type="number" th:field="*{height}" id="height">
+    <div class="error-message" th:if="${#fields.hasErrors()}" th:errors="*{height}">
+      Height error
+    </div>
+    <br>
+
+    <input type="submit" value="Save">
+  </div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <meta charset="UTF-8">
+  <title>Entity</title>
+  <link rel="stylesheet" th:href="@{~/css/tvs.css}">
+</head>
+<body>
+  <div th:fragment="entity">
+    <div th:if="${tv == null}">
+      <h2>Television not found</h2>
+      <p>Television with ID <span th:text="${id}"></span> was not found</p>
+    </div>
+    <div th:if="${tv != null}" class="container">
+      <p>ID: <span th:text="*{tv.id}">ID</span></p>
+      <p>Model: <span th:text="*{tv.model}">model</span></p>
+      <p>Producer: <span th:text="*{tv.producer}">producer</span></p>
+      <p>Production country: <span th:text="*{tv.productionCountry}">production country</span></p>
+      <p>Width: <span th:text="*{tv.width}">width</span></p>
+      <p>Height: <span th:text="*{tv.height}">height</span></p>
+      <hr>
+      <a th:href="@{/tvs/{id}/update(id=${tv.getId()})}">Edit</a>
+      <form th:method="post" th:action="@{/tvs/{id}/delete(id=${tv.getId()})}">
+        <input type="submit" value="Delete">
+      </form>
+      <form th:method="post" th:action="@{/tvs/{id}/purchase(id=${tv.getId()})}">
+        <input type="submit" value="Purchase">
+      </form>
+    </div>
+  </div>
+</body>
+</html>

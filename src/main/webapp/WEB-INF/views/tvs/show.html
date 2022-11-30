@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Show</title>
+  <link rel="stylesheet" th:href="@{~/css/tvs.css}">
+</head>
+<body>
+  <div th:if="${tvs.isEmpty()}">
+    <h2>Televisions not found</h2>
+    <p>No televisions were found</p>
+  </div>
+  <div th:each="tv : ${tvs}">
+    <div th:replace="tvs/entity :: entity">
+    </div>
+  </div>
+  <a th:href="@{/tvs/menu}">Menu</a>
+</body>
+</html>

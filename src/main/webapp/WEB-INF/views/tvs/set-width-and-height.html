@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" xmlns:th="http://www.thymeleaf.org">
+  <title>Search</title>
+  <link rel="stylesheet" th:href="@{~/css/tvs.css}">
+</head>
+<body>
+  <form th:method="get" th:action="@{/tvs/get-width-height}">
+    <label for="width">Width: </label>
+    <input type="number" th:name="width" id="width" required>
+    <br>
+    <label for="height">Height: </label>
+    <input type="number" th:name="height" id="height" required>
+    <br>
+    <input type="submit" value="Find">
+  </form>
+  <a th:href="@{/tvs/menu}">Menu</a>
+</body>
+</html>

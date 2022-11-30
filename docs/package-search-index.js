@@ -1,0 +1,1 @@
+packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ru.sfu.config"},{"l":"ru.sfu.controller"},{"l":"ru.sfu.entity"},{"l":"ru.sfu.repository"},{"l":"ru.sfu.rest"},{"l":"ru.sfu.service"}];updateSearchResults();

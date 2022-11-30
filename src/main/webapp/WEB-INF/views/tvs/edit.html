@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Edit</title>
+  <link rel="stylesheet" th:href="@{~/css/tvs.css}">
+</head>
+<body>
+  <div th:if="${tv == null}">
+    <h2>Television not found</h2>
+    <p>Television with ID <span th:text="${id}"></span> was not found</p>
+  </div>
+  <form th:if="${tv != null}" th:insert="tvs/form :: form"
+        th:method="post" th:action="@{/tvs/{id}/update(id=${tv.id})}" th:object="${tv}">
+  </form>
+
+  <a th:href="@{/tvs/menu}">Menu</a>
+</body>
+</html>

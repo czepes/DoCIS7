@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org"
+>
+<head>
+  <meta charset="UTF-8">
+  <title>Menu</title>
+  <link rel="stylesheet" th:href="@{~/css/tvs.css}">
+</head>
+<body>
+  <h2>Televisions</h2>
+  <h3>Menu</h3>
+  <ul class="unstyled-list">
+
+    <li>
+      <a th:href="@{/tvs/new}">Create</a>
+    </li>
+
+    <li>
+      <a th:href="@{/tvs}">Show + Update + Delete</a>
+    </li>
+
+    <li>
+      <a th:href="@{/tvs/set-width-height}">Find by Width and Height</a>
+    </li>
+  </ul>
+
+  <a th:href="@{/}">Main Menu</a>
+</body>
+</html>

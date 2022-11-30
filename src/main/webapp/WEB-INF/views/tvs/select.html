@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Select</title>
+  <link rel="stylesheet" th:href="@{~/css/tvs.css}">
+</head>
+<body>
+  <h3>Find by ID</h3>
+  <form th:method="get" th:action="@{/tvs/find-by-id}">
+    <label for="id">ID: </label>
+    <input type="number" th:name="id" id="id" required>
+    <input type="submit" value="Find">
+  </form>
+  <br>
+  <h3>Select Television</h3>
+  <div th:each="tv : ${tvs}">
+    <div th:replace="tvs/entity :: entity">
+    </div>
+  </div>
+  <a th:href="@{/tvs/menu}">Menu</a>
+</body>
+</html>

@@ -1,0 +1,30 @@
+.unstyled-list {
+    list-style: none; margin: 0; padding: 0;
+}
+
+.user-info {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid #bbc7d8;
+    border-radius: 5px;
+    background: #def5ff;
+}
+
+.container {
+    border: solid 3px;
+    max-width: 300px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+.container p {
+    margin: 2px 0 2px 0;
+    word-break: break-word;
+}
+
+.error-message {
+    color: red;
+}
