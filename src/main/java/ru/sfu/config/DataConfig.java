@@ -32,7 +32,7 @@ public class DataConfig {
      * @param env Environment
      */
     @Autowired
-    private DataConfig(Environment env) {
+    public DataConfig(Environment env) {
         this.env = env;
     }
 
