@@ -9,7 +9,7 @@ Tasks 1-5 were implemented in the project.
 
 Install and run `ActiveMQ Artemis 2.27.0` server.
 
-Configure `Broker URL` and `Queue` in `jms.properties` [(link)](src/main/resources/jms.properties).
+Configure `Broker URL` and `Queue` in [`jms.properties`](src/main/resources/jms.properties).
 
 Links:
 - [Download](https://activemq.apache.org/components/artemis/download/)
@@ -18,9 +18,9 @@ Links:
 
 ### Database
 
-Run `init.sql` to create table and fill it with test values.
+Run [`init.sql`](init.sql) to create table and fill it with test values.
 
-Configure Database connection in `data.properties` [(link)](src/main/resources/data.properties).
+Configure Database connection in [`data.properties`](src/main/resources/data.properties).
 
 ### Server
 
@@ -28,7 +28,7 @@ Create a local server configuration of `Apache Tomcat 10` server and deploy it.
 
 ### REST Client
 
-At `ru.sfu.rest.RestClient.java` [(link)](src/main/java/ru/sfu/rest/RestClient.java),
+At [`ru.sfu.rest.RestClient.java`](src/main/java/ru/sfu/rest/RestClient.java),
 set the `URL` variable to the URL of the configured server and run `RestClient.java`.
 
 ## Dependencies
